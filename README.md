@@ -77,7 +77,9 @@ PYTHONPATH=. python scripts/run_alignment_eval.py \
   --phn_root /path/to/annotations
 
 
-Audio
+---
+
+##Audio
 
 .wav files
 
@@ -91,7 +93,9 @@ Other corpora: .TextGrid files
 Supported TextGrid tiers (first match is used):
 phone, MAU, PHO, PHON
 
-Command-line Arguments
+---
+
+##Command-line Arguments
 
 | Argument         | Description                                                |
 | ---------------- | ---------------------------------------------------------- |
@@ -105,7 +109,9 @@ Command-line Arguments
 | `--cpu`          | Force CPU inference                                        |
 
 
-Exporting Alignments (CSV / TextGrid)
+---
+
+##Exporting Alignments (CSV / TextGrid)
 
 Predicted phoneme alignments can be exported for manual inspection or
 annotation using:
@@ -117,16 +123,22 @@ PYTHONPATH=. python scripts/export_alignments.py \
   --out_dir exported_alignments \
   --one_textgrid_per_file
 
-Notes on Reproducibility
+---
+
+##Notes on Reproducibility
 No model retraining is performed.
 Hyperparameters are selected via grid search on decoding outputs.
 The code is intended for annotation bootstrapping, not as a replacement
 for transcript-conditioned forced aligners.
 
-License
+---
+
+##License
 This code is released for research purposes.
 Please cite the accompanying paper if you use it.
 
-Contact
+---
+
+##Contact
 This repository is anonymized for peer review.
 
