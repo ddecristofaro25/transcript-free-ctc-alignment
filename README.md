@@ -105,3 +105,28 @@ Command-line Arguments
 | `--cpu`          | Force CPU inference                                        |
 
 
+Exporting Alignments (CSV / TextGrid)
+
+Predicted phoneme alignments can be exported for manual inspection or
+annotation using:
+scripts/export_alignments.py
+
+Example usage
+PYTHONPATH=. python scripts/export_alignments.py \
+  --wav_root /path/to/wav_files \
+  --out_dir exported_alignments \
+  --one_textgrid_per_file
+
+Notes on Reproducibility
+No model retraining is performed.
+Hyperparameters are selected via grid search on decoding outputs.
+The code is intended for annotation bootstrapping, not as a replacement
+for transcript-conditioned forced aligners.
+
+License
+This code is released for research purposes.
+Please cite the accompanying paper if you use it.
+
+Contact
+This repository is anonymized for peer review.
+
